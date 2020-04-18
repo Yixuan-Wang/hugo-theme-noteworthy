@@ -1,16 +1,15 @@
 {{ define "title" }}
-    <title>标签 | {{ .Site.Title }}</title>
+    <title>类别 | {{ .Site.Title }}</title>
 {{ end }}
-
 {{ define "main" }}
 <!-- Shows all of the site's tags -->
-<h1>标签</h1>
+<h1>类别</h1>
 {{ $data := .Data }}
 {{ range .Data.Terms.ByCount }}
 {{ $termLink := printf "/blog/%s/%s/" $data.Plural .Term | urlize }}
 <h2>
     <a href="{{ $termLink }}">{{ .Term }}</a>
-    有 {{ .Count }} 篇
+    有 {{ .Count }}篇
 </h2>
 <ul>
     {{ range .Pages | first 5 }}

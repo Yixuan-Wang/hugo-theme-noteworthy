@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <!-- Default base template. Other templates define the "main" portion in this template -->
-<html lang="{{ $.Site.LanguageCode | default "en" }}">
-    {{ partial "head.html" . }}
+<html lang="{{ $.Site.LanguageCode | default "zh-CN" }}">
+    <head>
+        {{ block "title" . }}
+        {{ end }}
+        <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+        {{ partial "head.html" . }}
+    </head>
     <body>
         {{ partial "nav.html" . }}
         <div id="content" class="content-container">
         {{ block "main" . }}
         {{ end }}
-        {{ partial "math.html" . }}
         </div>
         {{ partial "footer-mobile.html" . }}
     </body>

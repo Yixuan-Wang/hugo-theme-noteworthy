@@ -1,10 +1,9 @@
 {{ define "title" }}
-    <title>标签 | {{ .Site.Title }}</title>
+    <title>系列 | {{ .Site.Title }}</title>
 {{ end }}
-
 {{ define "main" }}
 <!-- Shows all of the site's tags -->
-<h1>标签</h1>
+<h1>系列</h1>
 {{ $data := .Data }}
 {{ range .Data.Terms.ByCount }}
 {{ $termLink := printf "/blog/%s/%s/" $data.Plural .Term | urlize }}

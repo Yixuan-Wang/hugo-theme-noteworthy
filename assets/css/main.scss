@@ -1,8 +1,8 @@
 /* VARIABLES ========================================================================== */
 
 // COLORS
-$teal: #63BDA2;
-$teal-darker: #359377;
+$accent: #319186;
+$accent-darker: #359377;
 $gray-background: #F7F7F7;
 $gray-table-border: #EEEEEE;
 $gray-lightest: #D2D2D2;
@@ -136,20 +136,21 @@ a:visited {
 
 .color-link {
     text-decoration: none;
-    color: $teal;
+    color: $accent;
     font-family: $sans-serif;
-    margin-right: 1.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .color-link:visited {
-    color: $teal;
+    color: $accent;
 }
 
 .color-link:hover {
-    color: $teal-darker;
+    color: $accent-darker;
 
     .color-arrow {
-        fill: $teal-darker;
+        fill: $accent-darker;
     }
 }
 
@@ -277,7 +278,7 @@ nav {
 }
 
 .nav-link {
-    margin-bottom: 0.5em;
+    margin-bottom: auto;
 }
 
 .description {
@@ -315,7 +316,7 @@ nav {
 
     a {
         text-decoration: none;
-        color: $teal;
+        color: $accent;
         font-size: 0.95rem;
     }
 }
@@ -362,7 +363,7 @@ nav {
 // SHORTCODE CONTENT
 .twitter-tweet {
     font-family: $sans-serif !important;
-    border-left: 4px solid $teal !important;
+    border-left: 4px solid $accent !important;
     color: $gray-dark !important;
     font-size: 1rem !important;
     font-style: italic !important;
@@ -479,8 +480,8 @@ footer {
     }
 
     .social-icon {
-        padding: 0.3em 0.5em;
-        margin: 0.32em 0.1em;
+        padding: 0.3em 0.2em;
+        margin: 0.32em 0.2em;
         display: inline-block;
         height: 2em;
         position: relative;
